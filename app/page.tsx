@@ -57,9 +57,7 @@ export default function HeroSectionOne() {
             transition={{ duration: 0.3, delay: 1 }}
             className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
           >
-            <button className="w-60 transform rounded-lg bg-gradient-to-r from-blue-600 to-teal-500 px-6 py-3 font-medium text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
-              Get Started
-            </button>
+            
           </motion.div>
         </Link>
 
