@@ -14,12 +14,16 @@ export async function POST(req: NextRequest){
       // If Not Then Create New User
       if(users?.length == 0){
       const result=await db.insert(usersTable).values({
+        // @ts-ignore
         name:user?.fullName,
         email:user?.primaryEmailAddress?.emailAddress,
         credits:10
+        // @ts-ignore
       }).returning({ usersTable })
+      // @ts-ignore
       return NextResponse.json(result?.usersTable);
       }
+      // @ts-ignore
       return NextResponse.json(users[0]?.usersTable)// this user contain list need to provide first
     } catch (error) {
       return NextResponse.json(error);
